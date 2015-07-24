@@ -1,0 +1,26 @@
+<nav class="navbar navbar-fixed-top">
+    <div class="container">
+<!--         <div class="navbar-header">
+            <fetch-club-logo></fetch-club-logo>
+        </div> -->
+        <ul class="nav navbar-nav">
+            <li class="folder-wrapper" ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
+                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
+<!--                 <ul class="folder-link-wrapper">
+                    <li class="page-collection"><a ui-sref-active="active" ui-sref="about">About</a>
+                    </li>
+                </ul> -->
+            </li>
+            <li ng-show="!user">
+                <a ui-sref-active="active" ui-sref="login">Login</a>
+            </li>
+            <li ng-show="user">
+                <a ng-click="logout()" ui-sref-active="active" ui-sref="logout">Logout</a>
+            </li>
+        </ul>
+        <div ng-show="user" class="welcome">
+            <span>Welcome, {{ user.email }}!</span>
+            <a ng-click="logout()">Logout</a>
+        </div>
+    </div>
+</nav>
