@@ -1,5 +1,7 @@
 # FetchClub
 
+This project was going to be for the Fetch Club dog daycare site and for learning purposes over Fullstack Academy's review week.
+
 ### Page Details
 
   Welcome/home page:
